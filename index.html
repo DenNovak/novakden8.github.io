@@ -1,5 +1,33 @@
 <html>
 <head>
+  <style>
+  .button6 {
+    background-color: #FF0000; /* red */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 200px;
+    margin: 20px 2px;
+    cursor: pointer;
+  }
+.button5 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 200px;
+  margin: 30px 2px;
+  cursor: pointer;
+}
+.button5 {border-radius: 50%;}
+.button6 {border-radius: 50%;}
+</style>
 <script>
   window.onload = function () {
     var canvas = document.getElementById('canvas');
@@ -27,6 +55,7 @@
       window.document.body.appendChild(img);
     }
 
+
     button.addEventListener('click', captureMe);
 
     // navigator.getUserMedia  и   window.URL.createObjectURL (смутные времена браузерных противоречий 2012)
@@ -46,6 +75,11 @@
       console.log('Something wrong with video stream or user don\'t allow to use it :P');
     });
   };
+  <FORM>
+<INPUT TYPE="BUTTON" VALUE="Alert Message" ONCLICK="AlertButton()">
+</FORM>
+document.getElementById("mybutton2").innerHTML = "Cat ";
+document.getElementById("mybutton2").innerHTML = "NOT cat";
 </script>
 <style>
 video{
@@ -70,5 +104,8 @@ video{
 </div>
 
 <input id="button" type="button" value="Click here!" />
+<br />
+<button class="button button5">Cat</button>
+<button class="button button6">NOT CAT</button>
 </body>
 </html>
