@@ -39,7 +39,7 @@
 
     // функция которая будет выполнена при нажатии на кнопку захвата кадра
     var captureMe = function () {
-      if (!videoStreamUrl) alert('something is wrong with your video stream.')
+      if (!videoStreamUrl) alert('Smth went wrong')
       // переворачиваем canvas зеркально по горизонтали (см. описание внизу статьи)
       context.translate(canvas.width, 0);
       context.scale(-1, 1);
@@ -54,7 +54,6 @@
       img.src = base64dataUrl;
       window.document.body.appendChild(img);
     }
-
 
     button.addEventListener('click', captureMe);
 
@@ -72,14 +71,9 @@
       // устанавливаем как источник для video
       video.src = videoStreamUrl;
     }, function () {
-      console.log('Something wrong with video stream or user don\'t allow to use it :P');
+      console.log('smth went wrong :P');
     });
   };
-  <FORM>
-<INPUT TYPE="BUTTON" VALUE="Alert Message" ONCLICK="AlertButton()">
-</FORM>
-document.getElementById("mybutton2").innerHTML = "Cat ";
-document.getElementById("mybutton2").innerHTML = "NOT cat";
 </script>
 <style>
 video{
@@ -92,7 +86,7 @@ video{
 </style>
 </head>
 <body>
-<div id="allow">▲ ▲ ▲ Please allow to use camera ▲ ▲ ▲ <br/> ( Сверху текущей страницы )</div>
+<div id="allow">Allow to use camera <br/> ( on the top of the current page )</div>
 
 <div class="item">
   <span> video </span>
@@ -103,8 +97,8 @@ video{
   <canvas id="canvas" width="320" height="240" ></canvas>
 </div>
 
-<input id="button" type="button" value="Click here!" />
-<br />
+<input id="button" type="button" value="Жми!" />
+
 <button class="button button5">Cat</button>
 <button class="button button6">NOT</button>
 </body>
